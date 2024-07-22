@@ -5,6 +5,7 @@
 @layer base {
   #root {
     @apply h-full;
+    @apply text-black;
   }
 
   html,
@@ -20,5 +21,11 @@
     @apply overflow-hidden;
   }
 
+  header {
+    -webkit-app-region: drag;
+  }
 
+  button {
+   -webkit-app-region: no-drag;
+  }
 }
