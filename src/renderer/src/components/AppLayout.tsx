@@ -26,7 +26,7 @@ export const Sidebar = ({ className, children, ...props }: ComponentProps<'aside
 export const Content = forwardRef<HTMLDivElement, ComponentProps<'div'>>(
   ({ children, className, ...props }, ref) => {
     return (
-      <div ref={ref} className={twMerge('flex w-full overflow-auto', className)} {...props}>
+      <div ref={ref} className={twMerge('flex flex-col w-full overflow-auto', className)} {...props}>
         {children}
       </div>
     )
