@@ -24,6 +24,7 @@
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^3.0.0",
     "@mdxeditor/editor": "^3.9.2",
+    "fs-extra": "^11.2.0",
     "jotai": "^2.9.1"
   },
   "devDependencies": {
@@ -42,6 +43,7 @@
     "electron-vite": "^2.3.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.3",
+    "lodash": "^4.17.21",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
     "react": "^18.3.1",
@@ -50,6 +52,7 @@
     "tailwind-merge": "^2.4.0",
     "tailwindcss": "^3.4.6",
     "typescript": "^5.5.2",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "vite-tsconfig-paths": "^4.3.2"
   }
 }
