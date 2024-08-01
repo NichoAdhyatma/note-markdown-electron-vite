@@ -8,14 +8,17 @@ import {
 import { useMarkDownEditor } from '@/hooks/useMarkDownEditor'
 
 export const MarkdownEditor = () => {
-  const { selectedNote } = useMarkDownEditor()
+  const { selectedNote, editorRef, handleAutoSaving, handleBlur } = useMarkDownEditor()
 
   if (!selectedNote) return null
 
   return (
     <MDXEditor
+      ref={editorRef}
       key={selectedNote.lastModified * Math.random()}
       markdown={selectedNote.content}
+      onChange={handleAutoSaving}
+      onBlur={handleBlur}
       plugins={[headingsPlugin(), listsPlugin(), quotePlugin(), markdownShortcutPlugin()]}
       contentEditableClassName={
         'outline-none min-h-screen max-w-none text-lg px-8 py-5 ' +

@@ -1,3 +1,6 @@
-import { NoteInfo } from './models'
+import { NoteContent, NoteInfo } from './models'
 
 export type GetNotes = () => Promise<Awaited<NoteInfo>[]>
+export type ReadNote = (title: NoteInfo['title']) => Promise<NoteContent>
+export type WriteNote = (title: NoteInfo['title'], content: NoteContent) => Promise<void>
+export type CreateNote = () => Promise<NoteInfo['title'] | false>
