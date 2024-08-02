@@ -15,8 +15,6 @@ export const useMarkDownEditor = () => {
     async (content: NoteContent) => {
       if (!selectedNote) return
 
-      console.info(`Auto-saving note: ${selectedNote.title}`)
-
       await saveNote(content)
     },
     autoSavingTime,
